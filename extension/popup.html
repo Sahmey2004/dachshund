@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f4f8, #f5f0fa);
+      padding: 16px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      color: #2d3748;
+    }
+
+    .header p {
+      font-size: 11px;
+      color: #718096;
+    }
+
+    .score-ring {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 5px solid #5F9EA0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 12px auto;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .score-ring.green {
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+
+    .score-ring.yellow {
+      border-color: #eab308;
+      color: #eab308;
+    }
+
+    .score-ring.orange {
+      border-color: #f97316;
+      color: #f97316;
+    }
+
+    .score-ring.red {
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .stat .val {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d3748;
+    }
+
+    .stat .lbl {
+      font-size: 10px;
+      color: #718096;
+    }
+
+    .label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 4px 0 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    .btn-primary {
+      background: #5F9EA0;
+      color: white;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #5F9EA0;
+      color: #5F9EA0;
+    }
+
+    .btn-danger {
+      background: transparent;
+      border: 1.5px solid #ef4444;
+      color: #ef4444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>🐶 Dachshund</h1>
+    <p>Your digital wellness companion</p>
+  </div>
+  <div id="score-ring" class="score-ring green">--</div>
+  <div id="status-label" class="label">Loading...</div>
+  <div class="stats">
+    <div class="stat">
+      <div class="val" id="minutes">--</div>
+      <div class="lbl">Minutes</div>
+    </div>
+    <div class="stat">
+      <div class="val" id="switches">--</div>
+      <div class="lbl">Tab Switches</div>
+    </div>
+    <div class="stat">
+      <div class="val" id="sites">--</div>
+      <div class="lbl">Sites Visited</div>
+    </div>
+    <div class="stat">
+      <div class="val" id="entries">--</div>
+      <div class="lbl">Entries</div>
+    </div>
+  </div>
+  <button class="btn-primary" id="export">📋 Copy Data to Clipboard</button>
+  <button class="btn-outline" id="open-dashboard">🌐 Open Dashboard</button>
+  <button class="btn-danger" id="clear">🗑️ Clear Today's Data</button>
+  <script src="popup.js"></script>
+</body>
+
+</html>
