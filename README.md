@@ -2,7 +2,7 @@
 
 Burnout early-warning for busy builders.
 
-Dachshund is a hackathon project that turns passive browsing behavior into a live, MBI-inspired burnout risk score. A Chrome extension records active-tab activity, a FastAPI backend analyzes fragmentation and burnout signals, and a React dashboard explains what is happening with charts, recommendations, and an AI chat assistant.
+Dachshund turns passive browsing behavior into a live, MBI-inspired burnout risk score. A Chrome extension records active-tab activity, a FastAPI backend analyzes fragmentation and burnout signals, and a React dashboard explains what is happening with charts, recommendations, and an AI chat assistant.
 
 ## Screenshots
 
