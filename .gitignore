@@ -8,4 +8,9 @@ dashboard/dist/
 .DS_Store
 .claude
 dashboard/.env.local
-
+docs
+tmp
+output
+dachshund_brief.pdf
+PLAN.md
+output
